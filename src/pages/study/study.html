@@ -14,7 +14,7 @@
 
 <ion-content>
   <ion-fab left bottom>
-     <button ion-fab mini> <ion-icon name="arrow-back"></ion-icon> </button> 
+     <button ion-fab mini id='fab_button'> <ion-icon name="arrow-back" isActive="false" color="dark"></ion-icon> </button> 
   </ion-fab>
 
   <ion-slides pager>
@@ -24,7 +24,7 @@
       <div>
         <h2>Short Vowels</h2>
         <span *ngFor="let s of shortVowels">
-      <button ion-button color="light" round>{{ s }}</button>
+      <button ion-button color="primary" round>{{ s }}</button>
     </span>
       </div>
 
@@ -33,27 +33,26 @@
     <ion-slide style="background-color: white">
       <h2>Long Vowels</h2>
       <span *ngFor="let l of longVowels">
-      <button ion-button color="light" round>{{ l }}</button>
+      <button ion-button color="primary" round>{{ l }}</button>
     </span>
     </ion-slide>
 
     <ion-slide style="background-color: white">
       <h2>Consonants</h2>
       <span *ngFor="let c of consonants">
-      <button ion-button color="light" round>{{ c }}</button>
+      <button ion-button color="primary" round>{{ c }}</button>
     </span>
     </ion-slide>
 
     <ion-slide style="background-color: white">
       <h2>Blends</h2>
       <span *ngFor="let b of blends">
-      <button ion-button color="light" round>{{ b }}</button>
+      <button ion-button color="primary" round>{{ b }}</button>
     </span>
     </ion-slide>
   </ion-slides>
 
   <ion-fab right bottom>
-      <!-- <button ion-fab></button> -->
-      <ion-icon name="arrow-forward"></ion-icon>
+     <button ion-fab mini id='fab_button'> <ion-icon name="arrow-forward" isActive="false" color="dark"></ion-icon> </button> 
   </ion-fab>
 </ion-content>
