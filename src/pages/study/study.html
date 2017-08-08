@@ -12,27 +12,48 @@
 
 </ion-header>
 
+<ion-content>
+  <ion-fab left bottom>
+     <button ion-fab mini> <ion-icon name="arrow-back"></ion-icon> </button> 
+  </ion-fab>
 
-<ion-slides pager>
+  <ion-slides pager>
 
-  <ion-slide style="background-color: green">
-    <h2>Short Vowels</h2>
-    <button ion-button color="light" round>A</button>
-<button ion-button round>E</button>
-<button ion-button color="secondary" round>I</button>
-<button ion-button color="danger" round>O</button>
-<button ion-button color="dark" round>U</button>
-  </ion-slide>
+    <ion-slide style="background-color: white">
 
-  <ion-slide style="background-color: blue">
-    <h2>Long Vowels</h2>
-  </ion-slide>
+      <div>
+        <h2>Short Vowels</h2>
+        <span *ngFor="let s of shortVowels">
+      <button ion-button color="light" round>{{ s }}</button>
+    </span>
+      </div>
 
-  <ion-slide style="background-color: red">
-    <h2>Consonants</h2>
-  </ion-slide>
-
-  <ion-slide style="background-color: yellow">
-    <h2>Blends</h2>
     </ion-slide>
-</ion-slides>
+
+    <ion-slide style="background-color: white">
+      <h2>Long Vowels</h2>
+      <span *ngFor="let l of longVowels">
+      <button ion-button color="light" round>{{ l }}</button>
+    </span>
+    </ion-slide>
+
+    <ion-slide style="background-color: white">
+      <h2>Consonants</h2>
+      <span *ngFor="let c of consonants">
+      <button ion-button color="light" round>{{ c }}</button>
+    </span>
+    </ion-slide>
+
+    <ion-slide style="background-color: white">
+      <h2>Blends</h2>
+      <span *ngFor="let b of blends">
+      <button ion-button color="light" round>{{ b }}</button>
+    </span>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-fab right bottom>
+      <!-- <button ion-fab></button> -->
+      <ion-icon name="arrow-forward"></ion-icon>
+  </ion-fab>
+</ion-content>

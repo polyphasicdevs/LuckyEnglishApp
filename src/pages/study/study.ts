@@ -15,6 +15,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class StudyPage {
 
+  shortVowels = ['A', 'E', 'I', 'O', 'U'];
+  longVowels = ['A', 'E', 'I', 'O', 'U'];
+  consonants = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z'];
+  blends = ['CH','SH','th','TH','oo','OO','OI','OY','ER','UR','IR','AR','OR','AW','OU','OW','ING','PH','TION'];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
