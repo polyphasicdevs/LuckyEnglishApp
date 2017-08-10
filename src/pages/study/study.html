@@ -24,7 +24,7 @@
       <div>
         <h2>Short Vowels</h2>
         <span *ngFor="let s of shortVowels">
-      <button ion-button color="primary" round>{{ s.letter }}</button>
+      <button ion-button color="primary" round (click)="presentProfileModal(s.letter, s.word, s.letter)">{{ s.letter }}</button>
     </span>
       </div>
 

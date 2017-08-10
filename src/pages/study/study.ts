@@ -1,5 +1,6 @@
+import { ModalComponent } from './../../components/modal/modal';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 /**
  * Generated class for the StudyPage page.
@@ -42,11 +43,17 @@ export class StudyPage {
 
   constructor(
     public navCtrl: NavController, 
-    public navParams: NavParams  
+    public navParams: NavParams,
+    public modelProfile: ModalComponent,
+    public modalCtrl: ModalController  
   ) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StudyPage');
   }
 
+  presentProfileModal(letter, word, img) {
+   let profileModal = this.modalCtrl.create(this.modelProfile,{'letter': letter, 'word': word, 'img': img});
+   profileModal.present();
+ }
 }
