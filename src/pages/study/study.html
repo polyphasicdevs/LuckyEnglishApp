@@ -24,7 +24,7 @@
       <div>
         <h2>Short Vowels</h2>
         <span *ngFor="let s of shortVowels">
-      <button ion-button color="primary" round (click)="presentProfileModal(s.letter, s.word, s.letter)">{{ s.letter }}</button>
+      <button ion-button color="primary" round (click)="openModal(s.letter, s.word, s.img)">{{ s.letter }}</button>
     </span>
       </div>
 
@@ -33,21 +33,21 @@
     <ion-slide style="background-color: white">
       <h2>Long Vowels</h2>
       <span *ngFor="let l of longVowels">
-      <button ion-button color="primary" round>{{ l }}</button>
+      <button ion-button color="primary" round (click)="openModal(l.letter, l.word, l.img)">{{ l.letter }}</button>
     </span>
     </ion-slide>
 
     <ion-slide style="background-color: white">
       <h2>Consonants</h2>
       <span *ngFor="let c of consonants">
-      <button ion-button color="primary" round>{{ c }}</button>
+      <button ion-button color="primary" round (click)="openModal(c.letter, c.word, c.img)">{{ c.letter }}</button>
     </span>
     </ion-slide>
 
     <ion-slide style="background-color: white">
       <h2>Blends</h2>
       <span *ngFor="let b of blends">
-      <button ion-button color="primary" round>{{ b }}</button>
+      <button ion-button color="primary" round (click)="openModal(b.letter, b.word, b.img)">{{ b.letter }}</button>
     </span>
     </ion-slide>
   </ion-slides>

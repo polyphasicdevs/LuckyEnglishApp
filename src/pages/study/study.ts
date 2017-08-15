@@ -1,6 +1,6 @@
 import { ModalComponent } from './../../components/modal/modal';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, ModalController } from 'ionic-angular';
 
 /**
  * Generated class for the StudyPage page.
@@ -19,41 +19,220 @@ export class StudyPage {
   shortVowels = [{
     'letter': 'A',
     'word': 'Apple',
-    'img': 'https://polyphasicdevs.com/luckyenglish/img/shortVowels/apple.png'
+    'img': 'null'
   },{
     'letter': 'E',
     'word': 'Egg',
-    'img': 'https://polyphasicdevs.com/luckyenglish/img/shortVowels/egg.png'
+    'img': 'null'
   },{
     'letter': 'I',
     'word': 'Insect',
-    'img': 'https://polyphasicdevs.com/luckyenglish/img/shortVowels/insect.png'
+    'img': 'null'
   },{
     'letter': 'O',
     'word': 'Orange',
-    'img': 'image'
+    'img': 'null'
   },{
     'letter': 'U',
     'word': 'Umbrella',
-    'img': 'image'
+    'img': 'null'
   }];
-  longVowels = ['A', 'E', 'I', 'O', 'U'];
-  consonants = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z'];
-  blends = ['CH','SH','th','TH','oo','OO','OI','OY','ER','UR','IR','AR','OR','AW','OU','OW','ING','PH','TION'];
+  longVowels = [{
+      'letter': 'A',
+      'word': '',
+      'img': ''
+    },{
+      'letter': 'E',
+      'word': '',
+      'img': ''
+    },{
+      'letter': 'I',
+      'word': '',
+      'img': ''
+    },{
+      'letter': 'O',
+      'word': '',
+      'img': ''
+    },{
+      'letter': 'U',
+      'word': '',
+      'img': ''
+    }];
+  consonants = [{
+    'letter': 'B',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'C',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'D',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'F',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'G',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'H',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'J',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'K',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'L',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'M',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'N',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'P',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'Q',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'R',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'S',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'T',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'V',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'W',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'X',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'Y',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'Z',
+    'word': '',
+    'img': ''
+  },];
+  blends = [{
+    'letter': 'CH',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'SH',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'th',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'TH',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'oo',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'OO',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'OI',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'OY',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'ER',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'UR',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'IR',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'AR',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'OR',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'AW',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'OU',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'OW',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'ING',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'PH',
+    'word': '',
+    'img': ''
+  },{
+    'letter': 'TION',
+    'word': '',
+    'img': ''
+  }];
 
   constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams,
-    public modelProfile: ModalComponent,
-    public modalCtrl: ModalController  
+    public navCtrl: NavController,
+    public modalCtrl: ModalController
   ) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad StudyPage');
   }
 
-  presentProfileModal(letter, word, img) {
-   let profileModal = this.modalCtrl.create(this.modelProfile,{'letter': letter, 'word': word, 'img': img});
-   profileModal.present();
- }
+  openModal(letter, word, img){
+    let modal = this.modalCtrl.create(ModalComponent,{letter: letter, word: word, image: img});
+    modal.present();
+  }
+
 }

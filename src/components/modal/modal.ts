@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavParams } from 'ionic-angular';
+import { NavParams, ViewController } from 'ionic-angular';
 /**
  * Generated class for the ModalComponent component.
  *
@@ -12,14 +12,20 @@ import { NavParams } from 'ionic-angular';
 })
 export class ModalComponent {
 
-  letter: string;
-  word: string;
-  img: string;
+    letter: string;
+    word: string;
+    img: string;
 
-  constructor(params: NavParams) {
+  constructor(
+    public viewCtrl: ViewController,
+    params: NavParams
+  ) {
     this.letter = params.get('letter');
     this.word = params.get('word');
-    this.img = params.get('img');
+    this.img = params.get('image');
   }
 
+  dismiss() {
+    this.viewCtrl.dismiss();
+  }
 }

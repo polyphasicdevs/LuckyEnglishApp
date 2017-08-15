@@ -1,3 +1,4 @@
+import { ComponentsModule } from './../components/components.module';
 import { ModalComponent } from './../components/modal/modal';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -5,7 +6,6 @@ import { IonicApp, IonicModule, IonicErrorHandler, NavParams } from 'ionic-angul
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
-// import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { StudyPage } from './../pages/study/study';
@@ -16,29 +16,27 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     AboutPage,
-    // ContactPage,
     HomePage,
     TabsPage,
     StudyPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ComponentsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     AboutPage,
-    // ContactPage,
     HomePage,
     TabsPage,
-    StudyPage
+    StudyPage,
+    ModalComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    ModalComponent,
-    NavParams,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

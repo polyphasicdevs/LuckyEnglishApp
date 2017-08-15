@@ -1,5 +1,8 @@
 {
   "name": "luckyEnglishApp",
   "app_id": "5177e400",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

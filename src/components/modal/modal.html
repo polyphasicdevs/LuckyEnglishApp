@@ -1,6 +1,18 @@
-<!-- Generated template for the ModalComponent component -->
-<div>
-  <h1>{{ letter }}</h1>>
-  <img [src]="img"/>
-  <p>{{ word }}</p>
-</div>
+<ion-header>
+  
+    <ion-navbar>
+      <ion-buttons start>
+        <button ion-button (click)="dismiss()">Close</button>
+      </ion-buttons>
+      <ion-title>Modals</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content padding>
+    <div>
+        <h1>{{ letter }}</h1>
+        <h2>{{ word }}</h2>
+        <img [src]="img">
+    </div>
+  </ion-content>
